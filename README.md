@@ -17,8 +17,7 @@ Currently saves users in text file.
 <img src="img/ATMSignIn.jpg">
 <img src="img/ATMMain.jpg">
 
-# WFA-Notepad
-
+# APP 2 NotePad
 
 ### APP Summary
 Basic notepad simulation made with c# in roughly .5 - 1 hours.
