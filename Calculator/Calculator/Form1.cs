@@ -18,6 +18,7 @@ namespace Calculator
         }
 
         public string currentNumber = "", oldnNumber = "", mark = "";
+        float answer = 0;
 
         #region numeric buttons
         private void bttn0_Click(object sender, EventArgs e)
@@ -75,15 +76,79 @@ namespace Calculator
             WriteToText();
         }
         #endregion
-
-        void WriteToText()
+        #region marks
+        void SelectMark(string mark)
         {
-            txtSolution.Text = oldnNumber + mark + currentNumber;
+            this.mark = mark;
+            ConvertCurrentNumber();
+            WriteToText();
+        }
+        private void bttnSums_Click(object sender, EventArgs e)
+        {
+            SelectMark("+");
+        }
+
+        private void bttnSubs_Click(object sender, EventArgs e)
+        {
+            SelectMark("-");
+        }
+
+        private void bttnMultiply_Click(object sender, EventArgs e)
+        {
+            SelectMark("*");
+        }
+
+        private void bttnDivide_Click(object sender, EventArgs e)
+        {
+            SelectMark("/");
+        }
+        #endregion
+        private void bttnRemove_Click(object sender, EventArgs e)
+        {
+            if (currentNumber != "")
+                currentNumber = currentNumber.Remove(currentNumber.Length - 1);
+            else if (mark != "")
+                mark = "";
+            else if (oldnNumber != "")
+                oldnNumber = oldnNumber.Remove(oldnNumber.Length - 1);
+            WriteToText();
+        }
+        private void bttnEquals_Click(object sender, EventArgs e)
+        {
+            if(oldnNumber != "" && currentNumber != "")
+            {
+                switch (mark)
+                {
+                    case "+":
+                        answer = int.Parse(oldnNumber) + int.Parse(currentNumber);
+                        break;
+                    case "-":
+                        answer = (float)int.Parse(oldnNumber) - (float)int.Parse(currentNumber);
+                        break;
+                    case "*":
+                        answer = int.Parse(oldnNumber) * int.Parse(currentNumber);
+                        break;
+                    case "/":
+                        answer = int.Parse(oldnNumber) / int.Parse(currentNumber);
+                        break;
+                }
+                oldnNumber = answer.ToString();
+                currentNumber = "";
+                mark = "";
+                WriteToText();
+            }
         }
         void ConvertCurrentNumber()
         {
-            oldnNumber = currentNumber;
-            currentNumber = "";
+            if (oldnNumber == "")
+            {
+                oldnNumber = currentNumber;
+                currentNumber = "";
+            }
+        }   
+        void WriteToText()
+        {
+            txtSolution.Text = oldnNumber + mark + currentNumber;
         }
     }
 }

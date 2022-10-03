@@ -46,6 +46,7 @@ namespace Calculator
             this.bttnSubs = new System.Windows.Forms.Button();
             this.bttnSums = new System.Windows.Forms.Button();
             this.bttnEquals = new System.Windows.Forms.Button();
+            this.bttnMultiply = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -200,6 +201,7 @@ namespace Calculator
             this.bttnRemove.TabIndex = 2;
             this.bttnRemove.Text = "Remove";
             this.bttnRemove.UseVisualStyleBackColor = true;
+            this.bttnRemove.Click += new System.EventHandler(this.bttnRemove_Click);
             // 
             // bttnDivide
             // 
@@ -207,10 +209,11 @@ namespace Calculator
             this.bttnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bttnDivide.Location = new System.Drawing.Point(179, 126);
             this.bttnDivide.Name = "bttnDivide";
-            this.bttnDivide.Size = new System.Drawing.Size(106, 50);
+            this.bttnDivide.Size = new System.Drawing.Size(50, 50);
             this.bttnDivide.TabIndex = 2;
             this.bttnDivide.Text = "/";
             this.bttnDivide.UseVisualStyleBackColor = true;
+            this.bttnDivide.Click += new System.EventHandler(this.bttnDivide_Click);
             // 
             // bttnSubs
             // 
@@ -218,32 +221,47 @@ namespace Calculator
             this.bttnSubs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bttnSubs.Location = new System.Drawing.Point(179, 182);
             this.bttnSubs.Name = "bttnSubs";
-            this.bttnSubs.Size = new System.Drawing.Size(106, 50);
+            this.bttnSubs.Size = new System.Drawing.Size(50, 50);
             this.bttnSubs.TabIndex = 2;
             this.bttnSubs.Text = "-";
             this.bttnSubs.UseVisualStyleBackColor = true;
+            this.bttnSubs.Click += new System.EventHandler(this.bttnSubs_Click);
             // 
             // bttnSums
             // 
             this.bttnSums.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bttnSums.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bttnSums.Location = new System.Drawing.Point(179, 238);
+            this.bttnSums.Location = new System.Drawing.Point(235, 182);
             this.bttnSums.Name = "bttnSums";
-            this.bttnSums.Size = new System.Drawing.Size(106, 50);
+            this.bttnSums.Size = new System.Drawing.Size(50, 50);
             this.bttnSums.TabIndex = 2;
             this.bttnSums.Text = "+";
             this.bttnSums.UseVisualStyleBackColor = true;
+            this.bttnSums.Click += new System.EventHandler(this.bttnSums_Click);
             // 
             // bttnEquals
             // 
             this.bttnEquals.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bttnEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bttnEquals.Location = new System.Drawing.Point(67, 238);
+            this.bttnEquals.Location = new System.Drawing.Point(179, 237);
             this.bttnEquals.Name = "bttnEquals";
             this.bttnEquals.Size = new System.Drawing.Size(106, 50);
             this.bttnEquals.TabIndex = 2;
             this.bttnEquals.Text = "=";
             this.bttnEquals.UseVisualStyleBackColor = true;
+            this.bttnEquals.Click += new System.EventHandler(this.bttnEquals_Click);
+            // 
+            // bttnMultiply
+            // 
+            this.bttnMultiply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bttnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bttnMultiply.Location = new System.Drawing.Point(235, 126);
+            this.bttnMultiply.Name = "bttnMultiply";
+            this.bttnMultiply.Size = new System.Drawing.Size(50, 50);
+            this.bttnMultiply.TabIndex = 2;
+            this.bttnMultiply.Text = "X";
+            this.bttnMultiply.UseVisualStyleBackColor = true;
+            this.bttnMultiply.Click += new System.EventHandler(this.bttnMultiply_Click);
             // 
             // Form1
             // 
@@ -253,6 +271,7 @@ namespace Calculator
             this.Controls.Add(this.bttnEquals);
             this.Controls.Add(this.bttnSums);
             this.Controls.Add(this.bttnSubs);
+            this.Controls.Add(this.bttnMultiply);
             this.Controls.Add(this.bttnDivide);
             this.Controls.Add(this.bttn9);
             this.Controls.Add(this.bttnRemove);
@@ -293,6 +312,7 @@ namespace Calculator
         private System.Windows.Forms.Button bttnSubs;
         private System.Windows.Forms.Button bttnSums;
         private System.Windows.Forms.Button bttnEquals;
+        private System.Windows.Forms.Button bttnMultiply;
     }
 }
 
