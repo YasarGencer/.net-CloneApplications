@@ -30,7 +30,7 @@ namespace Calculator
         private void InitializeComponent()
         {
             this.lblHeader = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSolution = new System.Windows.Forms.TextBox();
             this.bttn1 = new System.Windows.Forms.Button();
             this.bttn2 = new System.Windows.Forms.Button();
             this.bttn3 = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@ namespace Calculator
             this.bttn6 = new System.Windows.Forms.Button();
             this.bttn7 = new System.Windows.Forms.Button();
             this.bttn8 = new System.Windows.Forms.Button();
-            this.bttn = new System.Windows.Forms.Button();
+            this.bttn9 = new System.Windows.Forms.Button();
             this.bttn0 = new System.Windows.Forms.Button();
             this.bttnRemove = new System.Windows.Forms.Button();
             this.bttnDivide = new System.Windows.Forms.Button();
@@ -59,16 +59,16 @@ namespace Calculator
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "CALCULATOR";
             // 
-            // textBox1
+            // txtSolution
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(11, 35);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtSolution.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSolution.Enabled = false;
+            this.txtSolution.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSolution.Location = new System.Drawing.Point(11, 35);
+            this.txtSolution.Multiline = true;
+            this.txtSolution.Name = "txtSolution";
+            this.txtSolution.Size = new System.Drawing.Size(274, 29);
+            this.txtSolution.TabIndex = 1;
             // 
             // bttn1
             // 
@@ -80,6 +80,7 @@ namespace Calculator
             this.bttn1.TabIndex = 2;
             this.bttn1.Text = "1";
             this.bttn1.UseVisualStyleBackColor = true;
+            this.bttn1.Click += new System.EventHandler(this.bttn1_Click);
             // 
             // bttn2
             // 
@@ -91,6 +92,7 @@ namespace Calculator
             this.bttn2.TabIndex = 2;
             this.bttn2.Text = "2";
             this.bttn2.UseVisualStyleBackColor = true;
+            this.bttn2.Click += new System.EventHandler(this.bttn2_Click);
             // 
             // bttn3
             // 
@@ -102,6 +104,7 @@ namespace Calculator
             this.bttn3.TabIndex = 2;
             this.bttn3.Text = "3";
             this.bttn3.UseVisualStyleBackColor = true;
+            this.bttn3.Click += new System.EventHandler(this.bttn3_Click);
             // 
             // bttn4
             // 
@@ -113,6 +116,7 @@ namespace Calculator
             this.bttn4.TabIndex = 2;
             this.bttn4.Text = "4";
             this.bttn4.UseVisualStyleBackColor = true;
+            this.bttn4.Click += new System.EventHandler(this.bttn4_Click);
             // 
             // bttn5
             // 
@@ -124,6 +128,7 @@ namespace Calculator
             this.bttn5.TabIndex = 2;
             this.bttn5.Text = "5";
             this.bttn5.UseVisualStyleBackColor = true;
+            this.bttn5.Click += new System.EventHandler(this.bttn5_Click);
             // 
             // bttn6
             // 
@@ -135,6 +140,7 @@ namespace Calculator
             this.bttn6.TabIndex = 2;
             this.bttn6.Text = "6";
             this.bttn6.UseVisualStyleBackColor = true;
+            this.bttn6.Click += new System.EventHandler(this.bttn6_Click);
             // 
             // bttn7
             // 
@@ -146,6 +152,7 @@ namespace Calculator
             this.bttn7.TabIndex = 2;
             this.bttn7.Text = "7";
             this.bttn7.UseVisualStyleBackColor = true;
+            this.bttn7.Click += new System.EventHandler(this.bttn7_Click);
             // 
             // bttn8
             // 
@@ -157,17 +164,19 @@ namespace Calculator
             this.bttn8.TabIndex = 2;
             this.bttn8.Text = "8";
             this.bttn8.UseVisualStyleBackColor = true;
+            this.bttn8.Click += new System.EventHandler(this.bttn8_Click);
             // 
-            // bttn
+            // bttn9
             // 
-            this.bttn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bttn.Location = new System.Drawing.Point(123, 182);
-            this.bttn.Name = "bttn";
-            this.bttn.Size = new System.Drawing.Size(50, 50);
-            this.bttn.TabIndex = 2;
-            this.bttn.Text = "9";
-            this.bttn.UseVisualStyleBackColor = true;
+            this.bttn9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bttn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bttn9.Location = new System.Drawing.Point(123, 182);
+            this.bttn9.Name = "bttn9";
+            this.bttn9.Size = new System.Drawing.Size(50, 50);
+            this.bttn9.TabIndex = 2;
+            this.bttn9.Text = "9";
+            this.bttn9.UseVisualStyleBackColor = true;
+            this.bttn9.Click += new System.EventHandler(this.bttn9_Click);
             // 
             // bttn0
             // 
@@ -179,6 +188,7 @@ namespace Calculator
             this.bttn0.TabIndex = 2;
             this.bttn0.Text = "0";
             this.bttn0.UseVisualStyleBackColor = true;
+            this.bttn0.Click += new System.EventHandler(this.bttn0_Click);
             // 
             // bttnRemove
             // 
@@ -244,7 +254,7 @@ namespace Calculator
             this.Controls.Add(this.bttnSums);
             this.Controls.Add(this.bttnSubs);
             this.Controls.Add(this.bttnDivide);
-            this.Controls.Add(this.bttn);
+            this.Controls.Add(this.bttn9);
             this.Controls.Add(this.bttnRemove);
             this.Controls.Add(this.bttn6);
             this.Controls.Add(this.bttn3);
@@ -255,7 +265,7 @@ namespace Calculator
             this.Controls.Add(this.bttn4);
             this.Controls.Add(this.bttn2);
             this.Controls.Add(this.bttn1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSolution);
             this.Controls.Add(this.lblHeader);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -267,7 +277,7 @@ namespace Calculator
         #endregion
 
         private System.Windows.Forms.Label lblHeader;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSolution;
         private System.Windows.Forms.Button bttn1;
         private System.Windows.Forms.Button bttn2;
         private System.Windows.Forms.Button bttn3;
@@ -276,7 +286,7 @@ namespace Calculator
         private System.Windows.Forms.Button bttn6;
         private System.Windows.Forms.Button bttn7;
         private System.Windows.Forms.Button bttn8;
-        private System.Windows.Forms.Button bttn;
+        private System.Windows.Forms.Button bttn9;
         private System.Windows.Forms.Button bttn0;
         private System.Windows.Forms.Button bttnRemove;
         private System.Windows.Forms.Button bttnDivide;
