@@ -29,6 +29,7 @@ namespace Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblHeader = new System.Windows.Forms.Label();
             this.txtSolution = new System.Windows.Forms.TextBox();
             this.bttn1 = new System.Windows.Forms.Button();
@@ -286,8 +287,9 @@ namespace Calculator
             this.Controls.Add(this.bttn1);
             this.Controls.Add(this.txtSolution);
             this.Controls.Add(this.lblHeader);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculator by YG";
             this.ResumeLayout(false);
             this.PerformLayout();
 
