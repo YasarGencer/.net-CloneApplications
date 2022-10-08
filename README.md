@@ -21,7 +21,7 @@ Currently saves users in text file.
 <p align="center">
 <img src="img/ATMMain.jpg">
 
-<h1 align="center">Calculatır</h1>
+<h1 align="center">Calculator</h1>
 
 
 Basic calculator app with only 4 operations made with c# in roughly 1 - 2 hours.
