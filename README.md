@@ -32,13 +32,13 @@ There is a few apps i maade to learn .net programming.
 <p align = "center">
 <img src="img/CalculatorMain.jpg">
 
-# NotePad
+<h1 align="center">NotePad</h1>
 
-### APP Summary
-Basic notepad simulation made with c# in roughly .5 - 1 hours.
+    Basic notepad simulation made with c# in roughly .5 - 1 hours.
 
 
-### IMAGES
+<h2 align="center">Images</h1>
 
+<p align = "center">
 <img src="img/NoteAppMain.jpg">
 
