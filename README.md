@@ -4,30 +4,33 @@
 There is a few apps i maade to learn .net programming.
 
 
-## ATM Sim
+<h1 align="center">ATM Sim</h1>
 
-### APP Summary
-Basic atm simulation made with c# in roughly 4 - 5 hours. 
+    
+    Basic atm simulation made with c# in roughly 4 - 5 hours. 
 
-User can log in or sign in if they don't have an account. After user log in to their account they can withdraw or deposit money to their account. User can interact with other users. They can send other users money or take money from them. If user wants to take money from other accounts they must know other account's password.
+    User can log in or sign in if they don't have an account. After user log in to their account they can withdraw or deposit money to their account. User can interact with other users. They can send other users money or take money from them. If user wants to take money from other accounts they must know other account's password.
 
-Currently saves users in text file.
+    Currently saves users in text file.
 
-### IMAGES
-
+<h2 align="center">Images</h1>
+<p align="center">
 <img src="img/ATMLogIn.jpg">
+<p align="center">
 <img src="img/ATMSignIn.jpg">
+<p align="center">
 <img src="img/ATMMain.jpg">
 
-# Calculator
-
-### APP Summary
-Basic calculator app with only 4 operations made with c# in roughly 1 - 2 hours.
+<h1 align="center">Calculatır</h1>
 
 
-### IMAGES
+    Basic calculator app with only 4 operations made with c# in roughly 1 - 2 hours.
 
-<img src="img/NoteAppMain.jpg">
+
+<h2 align="center">Images</h1>
+
+<p align = "center">
+<img src="img/CalculatorMain.jpg">
 
 # NotePad
 
