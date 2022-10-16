@@ -136,6 +136,8 @@ namespace Calculator
                 currentNumber = "";
                 mark = "";
                 WriteToText();
+                if (answer == 31)
+                    MessageBox.Show("Haha");
             }
         }
         void ConvertCurrentNumber()
